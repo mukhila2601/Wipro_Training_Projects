@@ -1,0 +1,6 @@
+----- Medical Report -----
+Patient ID: 101
+Name: Rahul
+Diagnosis: Flu
+Prescription: Rest + Medicines
+

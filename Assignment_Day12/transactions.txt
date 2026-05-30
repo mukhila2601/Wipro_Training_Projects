@@ -1,0 +1,2 @@
+AccNo:101 | Deposit:5000
+AccNo:102 | Withdraw:2000

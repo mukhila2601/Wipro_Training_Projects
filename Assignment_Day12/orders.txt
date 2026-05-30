@@ -1,0 +1,2 @@
+OrderID:1001 | Product:Laptop | Qty:1 | Price:70000
+OrderID:301 | Item:Pizza | Address:Kolkata

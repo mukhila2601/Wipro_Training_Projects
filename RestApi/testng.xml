@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="API Suite">
+
+    <test name="REST API Tests">
+        <classes>
+            <class name="Day_28.GetUsersTest"/>
+            <class name="Day_28.LoginUserTest"/>
+            <class name="Day_28.GetAuthUserTest"/>
+            <class name="Day_28.GetSingleUserTest"/>
+            <class name="Day_28.SearchUserTest"/>
+            <class name="Day_28.FilterUserTest"/>
+            <class name="Day_28.LimitSkipUsersTest"/>
+            <class name="Day_28.SortUsersTest"/>
+            <class name="Day_28.GetPostTagsTest"/>
+            <class name="Day_28.GetPostsTagListTest"/>
+            <class name="Day_28.GetPostsByTagTest"/>
+        </classes>
+    </test>
+
+</suite>

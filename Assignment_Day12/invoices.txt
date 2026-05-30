@@ -1,0 +1,1 @@
+InvoiceID:1001 | Amount:70000 | GST:18%

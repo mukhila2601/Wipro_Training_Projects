@@ -1,0 +1,2 @@
+Hello, this is file handling in Java.
+We are learning create, write and read.
