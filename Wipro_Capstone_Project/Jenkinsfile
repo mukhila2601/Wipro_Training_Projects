@@ -11,7 +11,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main',
-                url: 'https://github.com/ShauryaChatterjee02/Wipro-Capstone-Project.git'
+                url: 'https://github.com/mukhila2601/Wipro_Capstone_project'
             }
         }
 

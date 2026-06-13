@@ -13,11 +13,6 @@ public class LabelsAndLinksPage {
     public LabelsAndLinksPage(WebDriver driver) {
         this.driver = driver;
     }
-
-    // ==========================
-    // LAPTOP LINKS
-    // ==========================
-
     private By appleLink =
             By.id("apple");
 
@@ -26,11 +21,6 @@ public class LabelsAndLinksPage {
 
     private By dellLink =
             By.id("dell");
-
-    // ==========================
-    // BROKEN LINKS
-    // ==========================
-
     private By brokenLinks =
             By.xpath("//*[@id='broken-links']/a");
 
