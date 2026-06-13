@@ -1,0 +1,58 @@
+pipeline {
+    agent any
+
+    tools {
+        maven 'Maven'      // Configure in Jenkins Global Tool Configuration
+        jdk 'JDK_26'        // Change according to your installed JDK name
+    }
+
+    stages {
+
+        stage('Checkout') {
+            steps {
+                git branch: 'main',
+                url: 'https://github.com/ShauryaChatterjee02/Wipro-Capstone-Project.git'
+            }
+        }
+
+        stage('Clean Workspace') {
+            steps {
+                bat 'mvn clean'
+            }
+        }
+
+        stage('Execute TestNG Suite') {
+            steps {
+                bat 'mvn test -DsuiteXmlFile=testng.xml'
+            }
+        }
+
+        stage('Publish TestNG Reports') {
+            steps {
+                publishHTML([
+                    allowMissing: true,
+                    alwaysLinkToLastBuild: true,
+                    keepAll: true,
+                    reportDir: 'test-output',
+                    reportFiles: 'emailable-report.html',
+                    reportName: 'TestNG Report'
+                ])
+            }
+        }
+    }
+
+    post {
+
+        always {
+            archiveArtifacts artifacts: 'test-output/**/*.*', fingerprint: true
+        }
+
+        success {
+            echo 'Automation execution completed successfully.'
+        }
+
+        failure {
+            echo 'Automation execution failed.'
+        }
+    }
+}
